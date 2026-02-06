@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you biboie?</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { color: #d63384; margin-bottom: 30px; }
+        .btn-group { display: flex; gap: 20px; justify-content: center; }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .yes-btn { background-color: #4CAF50; color: white; }
+        .no-btn { background-color: #f44336; color: white; }
+        button:hover { transform: scale(1.1); }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="question">Are you biboie?</h1>
+    <div class="btn-group" id="buttons">
+        <button class="yes-btn" onclick="sayHappyBirthday()">Yes</button>
+        <button class="no-btn" onclick="sayOkBye()">No</button>
+    </div>
+    <div id="message"></div>
+</div>
+
+<script>
+    function sayHappyBirthday() {
+        document.getElementById('question').innerText = "🎉 Surprise!";
+        document.getElementById('buttons').style.display = "none";
+        document.getElementById('message').innerHTML = "HAPPY BIRTHDAY! 🎂🎈";
+        document.body.style.background = "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)";
+    }
+
+    function sayOkBye() {
+        document.getElementById('buttons').style.display = "none";
+        document.getElementById('message').innerText = "ok bye";
+    }
+</script>
+
+</body>
+</html>
